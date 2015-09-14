@@ -8,7 +8,15 @@ public class lab1class {
 		Scanner scanner = new Scanner(System.in);
 		
 		double r;
-		r = (.02/12);
+		System.out.print("Annual return(max : .03): ");
+		r = (scanner.nextDouble());
+		if (r > .03 || r <= .01){
+			System.out.println("Annual return(max : .03): ");
+			r = scanner.nextDouble();
+		}
+		else{ 
+			r = r/12;
+		}
 		
 		double y;
 		System.out.print("Monthly SSI(max : 2642): ");
@@ -37,9 +45,15 @@ public class lab1class {
 		double PMT;
 		
 		
-		System.out.print("Annual return percentage: ");
-		r = (scanner.nextDouble()/12);
-		
+		System.out.print("Annual return percentage(max: .2): ");
+		r = (scanner.nextDouble());
+		if (r > .2 || r <= 0){
+			System.out.println("Annual return(max : .03): ");
+			r = scanner.nextDouble();
+		}
+		else {
+			r = r/12;
+		}
 		System.out.print("Years till retirment: ");
 		n = scanner.nextDouble()*12;
 		
